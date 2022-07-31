@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&family=Space+Mono&display=swap');
+
+
+/* &&&&&&&&&& Reset Values &&&&&&&&&&& */
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* &&&&&&&&&& Custom Variables &&&&&&&&&&& */
+
+:root {
+  --main-color-light: #F1F4F6;
+  --main-color-dark: #001D3D;
+  --title-color-light: #040C16;
+  --title-color-dark: #FEFFFF;
+  --para-color-light: #001D3D;
+  --para-color-dark: #FEFFFF;
+  --btn-text-light: #173B0C;
+  --btn-text-dark: #040403;
+  --btn-bckrgnd-dark: #31CB00;
+  
+
+}
+
+/* &&&&&&&&&& Dark Theme Styling &&&&&&&&&&& */
+body.dark {
+  background-color: var(--main-color-dark)
+}
+
+body {
+  min-width: 300px;
+}
+.group-title.dark {
+  color: var(--title-color-dark);
+}
+p.dark {
+  color: var(--para-color-dark);
+}
+.btn1.dark {
+  background-color: var(--btn-bckrgnd-dark);
+  border: 1px solid var(--btn-bckrgnd-dark);
+  color: var(--btn-text-dark);
+  box-shadow: 2px 2px 2px 2px var(--main-color-dark);
+}
+/* &&&&&&&&&& Main Styling &&&&&&&&&&& */
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: var(--main-color-light);
+    font-family: 'Space Mono', monospace;
+}
+.main{
+  padding: 50px;
+  
+}
+
+/* &&&&&& Navigation Styling &&& */
+nav{
+  display: flex;
+  padding: 2% 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  width: 60px
+}
+.toggle-btn {
+  object-fit: cover;
+  width: 50px;
+  cursor: pointer;
+}
+
+.group-title{
+  width: 353px;
+  height: 85px;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 74.8px;
+  color: var(--title-color-light);
+  margin-bottom: 15px;
+}
+
+p{
+  width: 662px;
+  height: 106px;
+  font-size: 36px;
+  line-height: 53.32px;
+  color: var(--para-color-light);
+  letter-spacing: 0.0085px;
+  margin-bottom: 25px;
+}
+
+.btn1{
+  
+  font-family: 'Source Code Pro', monospace;
+  font-size: 20px;
+  line-height: 35.2px;
+  text-transform: uppercase;
+  width: 185px;
+  padding: 10px;
+  color: var(--btn-text-light);
+  border: 1px solid var(--btn-text-light);
+  background-color: var(--main-color-light);
+  box-shadow: 2px 2px 2px 2px lightgrey;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out 0.1s;
+}
+.btn1:hover {
+  transform: scale(1.05);
+}
+
+/* &&&&&&&&&& Media Queries&&&&&&&&&&& */
+@media screen and (max-width: 750px){
+  nav img {
+    width: 40px;
+  }
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    padding: 4vw;
+    
+  }
+  .group-title {
+    font-size: 45px;
+  }
+
+  p{
+    width: 600px;
+    font-size: 30px;
+  }
+  .btn1{
+    font-size: 16px;
+  }
+
+}
+
+@media screen and (max-width: 600px){
+  
+  .group-title {
+    font-size: 35px;
+    height: 60px;
+  }
+
+  p{
+    width: 450px;
+    font-size: 20px;
+  }
+  .btn1{
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (max-width: 450px){
+ nav {
+  padding-left: 20px;
+  padding-right: 20px;
+ }
+
+ .logo {
+  width: 50px
+}
+
+ .toggle-btn{
+  width: 40px;
+}
+ .main {
+  padding-left: 30px;
+ }
+  .group-title {
+    font-size: 30px;
+  }
+
+  p{
+    width: 320px;
+    font-size: calc(16px + 0.1vw);
+    height: auto;
+    line-height: 40px;
+  }
+
+  .btn1{
+    font-size: 14px;
+    width: 150px;
+  }
+}
+
+
+
+
+ 

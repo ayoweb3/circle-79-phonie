@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&family=Space+Mono&display=swap');
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color-light: #F1F4F6;
+    --main-color-dark: #001D3D;
+    --title-color-light: #040C16;
+    --title-color-dark: #FEFFFF;
+    --designBtn_bkg-color-light: rgba(27, 67, 112, 0.1);
+    --designBtn_bkg-color-dark: #1B4370;
+    --submit_bkg-color-light: #1B4370;
+    --submit-color-light: #F5F5F5;
+    --designBtn-border-color-light: #040C16;
+    --designBtn-border-color-dark: #70A1D6;
+    --input-bckg-color-light: rgba(112, 161, 214, 0.1);
+    --input-color-dark: rgba(254, 255, 255, 0.7);
+    
+    --error-color: #e74c3c;
+}
+/* &&&&&&&&&& Dark Theme Styling &&&&&&&&&&& */
+body.dark {
+    background-color: var(--main-color-dark);
+}
+.phonie_title.dark {
+    color: var(--title-color-dark)
+}
+.name.dark, #phone_num.dark , .design-btn.dark{
+    border-color: var(--designBtn-border-color-dark);
+    background-color: var(--main-color-dark);
+    color: var(--input-color-dark);
+}
+.design-btn.dark {
+     
+    border-color:var(--designBtn-border-color-dark) ;
+}
+/* Autosuggestion styling  */
+
+.list-group-item.dark {
+    color: var(--input-color-dark)
+}
+
+
+/* &&&&&& Navigation Styling &&& */
+nav{
+    display: flex;
+    padding: 2% 40px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo{
+    width: 60px
+  }
+  .toggle-btn {
+    object-fit: cover;
+    width: 50px;
+    cursor: pointer;
+  }
+  /* &&&&&&&&&&&&&&&&&&& Main Styling &&&&&&&&&&&&&&&&&&&&&& */
+body{
+    background-color: var(--main-color-light);
+    min-height: 100vh;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phonie_title {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 60.34px;
+    color: var(--title-color-light)
+}
+
+
+/* &&&&&& form field styling Styling &&& */
+
+#form {
+    margin-top: 70px;
+}
+
+#first_name {
+    margin-right: 10px;
+}
+    
+.phonie_title {
+    text-align: center;
+}
+
+input, .phonie_title {
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.name{
+    width: 180px;
+}
+
+.name, #phone_num {
+    padding: 5px;
+    border: 2px solid var(--designBtn-border-color-light);
+    background-color: var(--main-color-light);
+    color: var(--title-color-light);
+    font-family: 'Space Mono', monospace;
+}
+
+#phone_num {
+    width:375px;
+    margin-bottom: 0;
+    
+}
+
+#phone_num, #submit {
+    display: block;
+}
+.telephone_field {
+    position: relative;
+}
+.network-logo{
+    display: inline;
+    position: absolute;
+    top:7px;
+    left: 90%;
+    z-index: 3;
+    width:20px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+small {
+    color: var(--error-color);
+    margin-bottom: 15px;
+    display: block;
+}
+/* &&&&&& btn styling Styling &&& */
+.btn-field {
+    position: relative;
+    width: 100%;
+    line-height: 60.34px;
+    margin-top: 25px;
+}
+.btn {
+    width: 100px;
+    height: 45px;
+}
+.design-btn {
+display: inline-block;
+position:relative;
+background-color: var(--designBtn_bkg-color-light);
+border: 1px solid var(--designBtn-border-color-light);
+margin-left: 35%;
+
+}
+#submit {
+    background-color: var(--submit_bkg-color-light);
+    margin: 0 auto;
+    color: var(--submit-color-light);
+    outline:none;
+    border-style: none;
+    position: absolute;
+    left: 5px;
+    bottom: 28px;
+    margin-left: 35%;
+    cursor: pointer;
+ }
+@-moz-document url-prefix() {
+    #submit {
+        background-color: var(--submit_bkg-color-light);
+        margin: 0 auto;
+        color: var(--submit-color-light);
+        outline:none;
+        border-style: none;
+        position: absolute;
+        left: 5px;
+        bottom: 7px;
+        margin-left: 35%;
+        cursor: pointer;
+     }
+ }
+ 
+ /* &&&&&& Autosuggestion Styling &&& */
+ 
+ .list-group-item {
+    font-family: 'Space Mono', monospace;
+    color: var(--title-color-light)
+    
+ }
+
+ /* &&&&&& Media queries section &&&&&& */
+
+@media screen and (max-width: 420px) {
+    nav {
+        padding-left: 20px;
+        padding-right: 20px;
+       }
+    .logo {
+        width: 50px
+    }
+    .toggle-btn{
+        width: 40px;
+    }
+    .phonie_title{
+        margin-top: 20px;
+        font-size: 25px;
+    }
+    .name {
+        width: 150px;
+    }
+    #phone_num {
+        width: 315px;
+    }
+
+}
+
+

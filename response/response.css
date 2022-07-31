@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&family=Space+Mono&display=swap');
+
+/* font-family: 'Source Code Pro', monospace;
+font-family: 'Space Mono', monospace; */
+
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+:root {
+    --main-color-light: #F1F4F6;
+    --main-color-dark: #001D3D;
+    --response-color-light: rgba(4, 12, 22, 0.7);
+    --response-color-dark:  rgba(254, 255, 255, 0.7);
+
+}
+
+/* &&&&&&&&&& Dark Theme Styling &&&&&&&&&&& */
+body.dark {
+    background-color: var(--main-color-dark);
+}
+
+.submit-message.dark {
+    color: var(--response-color-dark);
+}
+
+/* &&&&&& Navigation Styling &&& */
+nav{
+    display: flex;
+    padding: 2% 40px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo{
+    width: 60px
+  }
+  .toggle-btn {
+    object-fit: cover;
+    width: 50px;
+    cursor: pointer;
+  }
+
+  body {
+    background-color: var(--main-color-light);
+    width:100%;
+    height: 100vh;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+  }
+
+  .submit-message {
+    color: var(--response-color-light);
+    font-size: 25px;
+    font-family: 'Space Mono', monospace;
+  }
+
+  @media screen and (max-width: 650px) {
+    nav {
+        padding-left: 20px;
+        padding-right: 20px;
+       }
+      
+       .logo {
+        width: 50px
+      }
+      
+       .toggle-btn{
+        width: 40px;
+      }
+
+      .submit-message {
+        font-size: 16px;
+      }
+  }
+
+@media screen and (max-width: 420px) {
+    .submit-message {
+      font-size: 14px;
+      margin: 2vw;
+    }
+  }
